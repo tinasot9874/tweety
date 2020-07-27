@@ -6,7 +6,6 @@
                      alt=""
                      class="rounded-full mr-2" width="50" height="50">
             </a>
-
         </div>
         <div>
             <h5 class="font-bold"><a href="{{route('profile', $tweet->user->name)}}">{{ $tweet->user->name }}</a>
@@ -18,7 +17,5 @@
                 </p>
             </div>
         </div>
-
-
     </div>
 </div>
