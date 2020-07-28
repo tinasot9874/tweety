@@ -1,8 +1,8 @@
 <x-app>
     <header class="mb-6 relative">
         <div class="relative">
-            <img src="/images/default-profile-banner.jpg" class="rounded-lg" alt="">
-            <img src="{{ $user->getAvatarAttribute() }}"
+            <img src="{{$user->cover}}" class="rounded-lg" alt="">
+            <img src="{{$user->avatar}}"
                  class="rounded-full absolute transform -translate-x-1/2 -translate-y-1/2"
                  width="150"
                  style="left: 50%; box-shadow: 0 8px 8px -2px #4a5568"
