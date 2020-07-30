@@ -38,12 +38,21 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($value)
     {
-        return asset('storage/' . $value);
+        if (isset($value)) {
+            return asset('storage/' . $value);
+        } else {
+            return asset('images/default-avatar.jpeg');
+        }
     }
 
     public function getCoverAttribute($value)
     {
         return asset('storage/' . $value);
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
     }
 
     public function timeline()
